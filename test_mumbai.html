@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>hidden attributes</title>  
+<style>  
+  .container {  
+  font: 16px "Open Sans", Helvetica, Arial, sans-serif;  
+  border: 1px solid crimson;  
+  padding: 12px;  
+  width: 500px;  
+  text-align: center;  
+  border-radius: 10px;  
+}  
+.button {  
+  font: 22px "Open Sans";  
+  padding: 5px 36px;  
+  background-color: crimson;  
+  border: none;  
+  border-radius: 20px;  
+  color: aliceblue;  
+  text-shadow: black;  
+}  
+h1 {  
+  margin-top: 0;  
+  font-size: 175%;  
+  color: crimson;  
+}  
+</style>  
+</head>  
+<body>   
+  <div id="show" class="container" hidden>  
+    <h1>Thanks!</h1>  
+    <p>Thank you by clicking the <strong>ok</strong>   
+    you fulfil the criteria required to display the hidden content which was displayed using JAVASCRIPT!</p>  
+  </div>  
+<div id="hidden" class="container">  
+  <h1>this is an example of hidden attribute</h1>  
+  <p>By clicking "OK" you agree to display the hidden content!</p>  
+  <button class="button" id="okButton">OK</button>  
+</div>  
+<script>  
+document.getElementById("okButton")  
+        .addEventListener("click", function() {  
+  document.getElementById("hidden").hidden = true;  
+  document.getElementById("show").hidden = false;  
+}, false);  
+</script>  
+</body>  
+</html>
